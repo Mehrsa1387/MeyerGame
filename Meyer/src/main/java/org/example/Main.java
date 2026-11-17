@@ -13,7 +13,7 @@ public class Main {
         System.out.println(num1+" and "+ num2);
         System.out.println("roll again? (y/n)");
         String rollagain = input.nextLine();
-        if (rollagain.equalsIgnoreCase("y")) {
+        if (rollagain.equalsIgnoreCase("y") && !hasRolledAgain) {
             hasRolledAgain = true;
             num1 = RollDice();
             num2 = RollDice();
