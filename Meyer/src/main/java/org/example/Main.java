@@ -13,10 +13,10 @@ public class Main {
     // Rækkefølgen bestemmer, hvilket kast der er bedst.
     static int[] ranking = {
             21, 31,
-            66, 55, 44, 33, 22, 11,
-            65, 64, 63, 62, 61,
-            54, 53, 52, 51,
-            43, 42, 41
+            66, 65, 64, 63, 62, 61,
+            55, 54, 53, 52, 51,
+            44, 43, 42, 41,
+            33, 22, 11
     };
 
     public static void main(String[] args) {
@@ -119,9 +119,11 @@ public class Main {
 
         int num1 = rollDice();
         int num2 = rollDice();
+        int actualResult = getDiceValue(num1, num2);
 
         System.out.println("Du slog: " + num1 + " og " + num2);
-        System.out.println("Vil du kaste om?");
+        System.out.println("Dit faktiske resultat er: " + getResultName(actualResult));
+        System.out.println("Vil du kaste om? (Skriv tal)");
         System.out.println("1. Ja");
         System.out.println("2. Nej");
         int choice = getChoice(1, 2);
